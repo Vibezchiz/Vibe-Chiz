@@ -1,0 +1,89 @@
+Here is a basic HTML structure for the Vibez Shooter game:
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vibez Shooter</title>
+	<style>
+		/* Add styles here */
+	</style>
+</head>
+<body>
+	<canvas id="gameCanvas" width="800" height="600"></canvas>
+	<script>
+		// Game code goes here
+	</script>
+</body>
+</html>
+```
+This HTML file creates a basic canvas element where we can render the game. We'll need to add JavaScript code to handle game logic, rendering, and user input.
+
+Here's a more complete example with some basic game logic:
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vibez Shooter</title>
+	<style>
+		/* Add styles here */
+	</style>
+</head>
+<body>
+	<canvas id="gameCanvas" width="800" height="600"></canvas>
+	<script>
+		const canvas = document.getElementById('gameCanvas');
+		const ctx = canvas.getContext('2d');
+		
+		let playerX = 100;
+		let playerY = 100;
+		let speed = 5;
+		
+		let zombies = [];
+		let bullets = [];
+		
+		function movePlayer(dx, dy) {
+			playerX += dx * speed;
+			playerY += dy * speed;
+		}
+		
+		function shoot() {
+			// Shoot a bullet
+		}
+		
+		function update() {
+			// Update game logic
+		}
+		
+		function render() {
+			// Render game elements
+		}
+		
+		setInterval(update, 1000/60);
+		setInterval(render, 1000/60);
+		
+		document.addEventListener('keydown', (e) => {
+			switch (e.key) {
+				case 'w':
+					movePlayer(0, -1);
+					break;
+				case 's':
+					movePlayer(0, 1);
+					break;
+				case 'a':
+					movePlayer(-1, 0);
+					break;
+				case 'd':
+					movePlayer(1, 0);
+					break;
+				case ' ':
+					shoot();
+					break;
+			}
+		});
+	</script>
+</body>
+</html>
+```
+This example includes basic player movement, shooting, and game loops. We'll need to add more features, such as zombie AI, collision detection, and scoring.
+
+Let me know if you'd like me to add any specific features or if you have questions about this code!
